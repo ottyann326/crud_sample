@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   post '/users', to: 'users#create'
   # 削除機能の実装のルーティング
   delete '/users/:id', to: 'users#destroy'
+  # 編集機能の実装のルーティング
+  get '/users/:id/edit', to: 'users#edit'
+  # 更新完了の実装のルーティング
+  patch '/users/:id', to: 'users#update'
 end

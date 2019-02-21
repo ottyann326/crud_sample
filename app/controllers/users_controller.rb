@@ -21,6 +21,17 @@ class UsersController < ApplicationController
     user.delete
   end
 
+# 編集するためのアクション
+  def edit
+    @user = User.find(params[:id])
+  end
+
+# 更新するためのアクション
+  def update
+    user = User.find(params[:id])
+    user.update(user_params)
+  end
+
   private
 # 以下のメソッドを追加
   def user_params
