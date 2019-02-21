@@ -15,6 +15,12 @@ class UsersController < ApplicationController
     User.create(user_params)
   end
 
+# 削除するためのアクション
+  def destroy
+    user = User.find(params[:id])
+    user.delete
+  end
+
   private
 # 以下のメソッドを追加
   def user_params
